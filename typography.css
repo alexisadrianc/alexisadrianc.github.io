@@ -1,0 +1,108 @@
+@font-face {
+  font-family:'Poppins';font-style:normal;font-weight:400;font-display:swap;
+  src:url('./assets/fonts/poppins-latin-400-normal.woff2') format('woff2');
+}
+@font-face {
+  font-family:'Poppins';font-style:normal;font-weight:500;font-display:swap;
+  src:url('./assets/fonts/poppins-latin-500-normal.woff2') format('woff2');
+}
+@font-face {
+  font-family:'Geist Mono';font-style:normal;font-weight:400;font-display:swap;
+  src:url('./assets/fonts/geist-mono-latin-400-normal.woff2') format('woff2');
+}
+@font-face {
+  font-family:'Geist Mono';font-style:normal;font-weight:500;font-display:swap;
+  src:url('./assets/fonts/geist-mono-latin-500-normal.woff2') format('woff2');
+}
+:root {
+  --font-voice:'Poppins',Arial,sans-serif;
+  --font-technical:'Geist Mono','Courier New',monospace;
+  font-family:var(--font-voice);
+  font-weight:400;
+}
+h1,h2,h3,h4,p {font-family:var(--font-voice)}
+h1,h2,h3 {font-weight:400;letter-spacing:-.055em}
+b,strong,h4 {font-weight:500}
+em {font-family:var(--font-voice);font-weight:500;font-style:normal}
+h1 {font-size:clamp(3.3rem,6.7vw,7.7rem);line-height:1.1}
+h2 {line-height:1.15}
+.last-line,.last-line em {letter-spacing:-.05em}
+.last-line {font-size:.83em}
+p {line-height:1.7}
+.hero-bottom p {line-height:1.65}
+.header nav,button,select,.brand,.round-link,.skip,.text-link,
+.footer-bottom a {
+  font-family:var(--font-technical);font-weight:400;letter-spacing:-.025em;
+}
+.eyebrow,.hero-meta,.hero-foot,.paper-label,.paper-id,.demo-top,
+.report-controls,.report-data span,.report-data small,.chart-caption,
+.demo-note,.migration-table th,.case-topline,.case-caption,.call-tag,
+.experience summary span,.text-link span,.source-note,.footer-bottom,
+.case-flow small {
+  font-family:var(--font-technical);font-weight:400;
+}
+.eyebrow,.paper-label,.demo-top,.case-topline,.call-tag {
+  letter-spacing:.055em;
+}
+.hero-meta {font-size:.75rem;gap:24px}
+.hero-meta span:last-child {text-align:right}
+.brand {letter-spacing:.065em}
+.contact-link,.pill,.demo-button,.case-open {font-weight:500}
+.invoice-number,.report-data strong,.migration-table td,.event-node b,
+.call-letter,.case-flow>span {
+  font-family:var(--font-technical);font-weight:500;
+  font-variant-numeric:tabular-nums;letter-spacing:-.04em;
+}
+.report-data strong {font-size:clamp(1.4rem,2.6vw,2.8rem)}
+.report-data span {line-height:1.5;min-height:1.5em}
+.migration-table td {font-size:.8rem;line-height:1.6}
+.migration-table td:first-child {font-family:var(--font-voice);font-weight:400}
+.event-node {font-family:var(--font-technical);font-weight:500;font-size:.8rem}
+.problem {font-size:clamp(1.15rem,1.65vw,1.75rem);line-height:1.4;letter-spacing:-.04em}
+.paper {gap:11px}
+.paper b {font-size:1rem;line-height:1.45}
+.paper>span:last-of-type {font-size:.8rem;line-height:1.5}
+.case-surface h3,.case-surface h3 em {letter-spacing:-.055em;line-height:1.1}
+.case-detail h2 {line-height:1.1}
+.case-flow {gap:22px}
+.case-flow small {line-height:1.55}
+.case-copy .source-note {font-size:.82rem;line-height:1.7}
+.experience summary span {line-height:1.5}
+.footer-bottom {line-height:1.6}
+@media(max-width:1050px) {
+  .hero-meta {font-size:.7rem}
+  .report-data {column-gap:12px}
+}
+@media(max-width:700px) {
+  h1 {font-size:clamp(2.4rem,11.9vw,4.8rem);line-height:1.12}
+  .last-line {font-size:.88em;max-width:100%;line-height:1.15}
+  .hero-meta {font-size:.72rem}
+  .hero-foot {font-size:.7rem}
+  .hero-foot>span:first-child {max-width:140px}
+  .brand {font-size:.72rem;letter-spacing:.025em}
+  .header nav>a {font-size:.75rem}
+  .problem {font-size:1.15rem;line-height:1.45}
+  .demo h3 {font-size:1.65rem;line-height:1.25}
+  .demo-top {font-size:.7rem;align-items:start}
+  .demo-top span:last-child {max-width:118px;text-align:right;line-height:1.5}
+  .demo {min-height:560px}
+  .report-data strong {font-size:clamp(1.25rem,6.1vw,1.8rem)}
+  .report-data span {font-size:.75rem;min-height:3em}
+  .report-data small {font-size:.75rem}
+  .report-controls {font-size:.8rem;gap:12px}
+  .report-controls select {font-size:.8rem;max-width:145px}
+  .demo-note,.chart-caption,.chart-legend {font-size:.75rem}
+  .migration-table td {font-size:.75rem}
+  .migration-table th {font-size:.7rem;line-height:1.6}
+  .migration-table td:first-child {max-width:100px}
+  .event-node {font-size:.7rem}
+  .event-route {gap:6px}
+  .case-surface h3 {font-size:clamp(2rem,9.5vw,3rem)}
+  .case-detail h2 {font-size:clamp(2.3rem,11.4vw,3.2rem)}
+  .call-tag {font-size:.65rem}
+  .case-topline {font-size:.7rem}
+  .case-copy h3 {font-size:1.85rem}
+  .case-flow>span {font-size:1.15rem}
+  .email {font-size:clamp(.95rem,4.65vw,1.5rem)}
+  .footer-bottom>span {font-size:.7rem}
+}

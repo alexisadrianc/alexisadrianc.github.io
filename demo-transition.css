@@ -1,0 +1,17 @@
+/* Preserve the dark surface while its measured height and contents change. */
+.demo{align-self:start;overflow-anchor:none}
+.demo-content{display:flow-root}
+.problem{position:relative;transition:color 450ms var(--ease)}
+.problem::after{content:none!important}
+.problem .problem-copy{display:block}
+.problem-icon{position:absolute;right:4px;top:50%;width:15px;height:15px;transform:translateY(-50%)}
+.problem-icon::before,.problem-icon::after{
+  content:'';position:absolute;top:50%;left:50%;background:currentColor;transform:translate(-50%,-50%);
+}
+.problem-icon::before{width:12px;height:1px}
+.problem-icon::after{
+  width:1px;height:12px;transform-origin:center;
+  transition:transform 480ms var(--ease),opacity 480ms var(--ease);
+}
+.problem[aria-pressed="true"] .problem-icon::after{transform:translate(-50%,-50%) rotate(90deg);opacity:0}
+@media(prefers-reduced-motion:reduce){.problem,.problem-icon::after{transition:none}}

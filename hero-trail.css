@@ -1,0 +1,5 @@
+.hero{position:relative;isolation:isolate;overflow:hidden;overflow:clip}
+.hero>.hero-trail{position:absolute;inset:0;z-index:0;pointer-events:none;overflow:hidden;contain:layout paint;user-select:none}
+.hero>:not(.hero-trail){position:relative;z-index:1}
+.hero-trail-logo{position:absolute;display:block;object-fit:contain;opacity:0;pointer-events:none;user-select:none;-webkit-user-drag:none;transform-origin:center}
+@media(prefers-reduced-motion:reduce),(hover:none),(pointer:coarse){.hero>.hero-trail{display:none}}

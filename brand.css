@@ -1,0 +1,33 @@
+/* Display the supplied transparent logo without its canvas margins.
+   The original PNG and its continuous stroke remain untouched. */
+.monogram {
+  width:56px;
+  height:32px;
+  flex-shrink:0;
+  mix-blend-mode:normal;
+}
+.monogram img {
+  width:121.14%;
+  height:auto;
+  left:-9.62%;
+  top:-21.25%;
+}
+.about-identity {
+  display:flex;
+  align-items:center;
+  gap:20px;
+  margin-bottom:26px;
+}
+.about-avatar {
+  display:block;
+  width:80px;
+  height:80px;
+  flex-shrink:0;
+  border-radius:16px;
+}
+@media(max-width:700px) {
+  .monogram {width:44px;height:25px}
+  .about-identity {gap:16px}
+  .about-avatar {width:64px;height:64px;border-radius:12px}
+  .about-identity .eyebrow {max-width:190px}
+}

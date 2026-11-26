@@ -1,0 +1,10 @@
+.tools/
+node_modules/
+tmp/
+*.log
+dist/
+.env
+.env.*
+!.env.example
+*.pem
+*.key
